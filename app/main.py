@@ -6,7 +6,10 @@ def main():
     while True: #forever loop
         sys.stdout.write("$ ")
         cmd = input() # take input and return as str
-        print(f"{cmd}: command not found")
+        if cmd != 'exit':
+            print(f"{cmd}: command not found")
+        if cmd == 'exit':
+            return exit
     #pass
     return 1
 

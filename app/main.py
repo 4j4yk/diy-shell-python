@@ -2,14 +2,18 @@ import sys
 
 
 def main():
-    # TODO: Uncomment the code below to pass the first stage
+    # nothing to see here, just making some Long Island iced tea 
     while True: #forever loop
+        validCmds = ['', 'exit','echo']
         sys.stdout.write("$ ")
         cmd = input() # take input and return as str
-        if cmd != 'exit':
+        if False == cmd.startswith(('exit','echo')):
             print(f"{cmd}: command not found")
-        if cmd == 'exit':
+        elif cmd == 'exit':
             return exit # exit shell
+        elif cmd.startswith(('echo')):
+            print(f"{cmd[5:]}") # simple hardcoded skip
+
     #pass
     return 1
 

@@ -9,7 +9,7 @@ def main():
         if cmd != 'exit':
             print(f"{cmd}: command not found")
         if cmd == 'exit':
-            return exit
+            return exit # exit shell
     #pass
     return 1
 
